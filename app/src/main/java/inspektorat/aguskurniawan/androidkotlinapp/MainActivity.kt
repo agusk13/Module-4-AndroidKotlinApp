@@ -12,6 +12,8 @@ import androidx.core.view.WindowInsetsCompat
 class MainActivity : AppCompatActivity() {
     private lateinit var tvCounter: TextView
     private lateinit var btnAddNumber: Button
+    private lateinit var btnSubNumber: Button
+    private lateinit var btnResetNumber: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +21,8 @@ class MainActivity : AppCompatActivity() {
 
         tvCounter = findViewById(R.id.tvCounter)
         btnAddNumber = findViewById(R.id.btnAddNumber)
+        btnSubNumber = findViewById(R.id.btnSubNumber)
+        btnResetNumber = findViewById(R.id.btnResetNumber)
 
         tvCounter.text = "1"
     }
