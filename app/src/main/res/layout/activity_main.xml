@@ -23,4 +23,12 @@
         android:layout_marginTop="20dp"
         android:text="@string/add_number"
         android:onClick="addNumber"/>
+
+    <Button
+        android:id="@+id/btnSubNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/sub_number"
+        android:onClick="subNumber"/>
 </LinearLayout>

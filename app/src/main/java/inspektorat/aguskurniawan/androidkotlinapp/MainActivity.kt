@@ -28,4 +28,10 @@ class MainActivity : AppCompatActivity() {
         val nextVal = currVal + 1
         tvCounter.text = nextVal.toString()
     }
+
+    fun subNumber(v: View){
+        val currVal = tvCounter.text.toString().toInt()
+        val nextVal = currVal - 1
+        tvCounter.text = nextVal.toString()
+    }
 }
