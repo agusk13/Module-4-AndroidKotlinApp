@@ -34,4 +34,8 @@ class MainActivity : AppCompatActivity() {
         val nextVal = currVal - 1
         tvCounter.text = nextVal.toString()
     }
+
+    fun resetNumber(v: View){
+        tvCounter.text = "0"
+    }
 }
