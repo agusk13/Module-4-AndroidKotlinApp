@@ -8,38 +8,34 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import inspektorat.aguskurniawan.androidkotlinapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var tvCounter: TextView
-    private lateinit var btnAddNumber: Button
-    private lateinit var btnSubNumber: Button
-    private lateinit var btnResetNumber: Button
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        tvCounter = findViewById(R.id.tvCounter)
-        btnAddNumber = findViewById(R.id.btnAddNumber)
-        btnSubNumber = findViewById(R.id.btnSubNumber)
-        btnResetNumber = findViewById(R.id.btnResetNumber)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        tvCounter.text = "1"
+        binding.tvCounter.text = "1"
     }
 
     fun addNumber(v: View){
-        val currVal = tvCounter.text.toString().toInt()
+        val currVal = binding.tvCounter.text.toString().toInt()
         val nextVal = currVal + 1
-        tvCounter.text = nextVal.toString()
+        binding.tvCounter.text = nextVal.toString()
     }
 
     fun subNumber(v: View){
-        val currVal = tvCounter.text.toString().toInt()
+        val currVal = binding.tvCounter.text.toString().toInt()
         val nextVal = currVal - 1
-        tvCounter.text = nextVal.toString()
+        binding.tvCounter.text = nextVal.toString()
     }
 
     fun resetNumber(v: View){
-        tvCounter.text = "0"
+        binding.tvCounter.text = "0"
     }
 }
